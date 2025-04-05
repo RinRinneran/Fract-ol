@@ -6,7 +6,7 @@
 #    By: rpelckma <marvin@.42.fr>                   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/05 12:51:58 by rpelckma          #+#    #+#              #
-#    Updated: 2025/04/05 13:56:02 by rpelckma         ###   ########.fr        #
+#    Updated: 2025/04/05 13:59:27 by rpelckma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,12 @@ MLX = $(MLX_PATH)/libmlx.a
 
 NAME = fractol
 
+all: submodule $(NAME)
+
 submodule:
 	@echo "Initializing and updating git submodule minilibx"
 	@git submodule update --init --recursive
 
-all: submodule $(NAME)
 
 $(NAME): $(OBJ_FILES) $(LIBFT) $(MLX)
 	@$(CC) $(CFLAGS) -o $@ $^ -L$(LIBFT_PATH) -lft -L$(MLX_PATH) -lmlx -lXext -lGL -lX11
