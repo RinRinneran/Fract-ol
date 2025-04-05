@@ -6,7 +6,7 @@
 #    By: rpelckma <marvin@.42.fr>                   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/05 12:51:58 by rpelckma          #+#    #+#              #
-#    Updated: 2025/04/05 12:52:16 by rpelckma         ###   ########.fr        #
+#    Updated: 2025/04/05 13:27:56 by rpelckma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,12 +31,11 @@ all: $(NAME)
 
 $(NAME): $(OBJ_FILES) $(LIBFT) $(MLX)
 	@$(CC) $(CFLAGS) -o $@ $^ -L$(LIBFT_PATH) -lft -L$(MLX_PATH) -lmlx -lXext -lGL -lX11
-	@echo "Compilation successful, $(NAME) was created"
+	@echo "Compilation successful, object files and $(NAME) were created"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -I$(LIBFT_PATH) -I$(MLX_PATH) -c -o $@ $<
-	@echo "Object files were created"
 
 $(LIBFT):
 	@$(MAKE) -C $(LIBFT_PATH) > /dev/null 2>&1
