@@ -6,7 +6,7 @@
 /*   By: rpelckma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 10:47:39 by rpelckma          #+#    #+#             */
-/*   Updated: 2025/04/05 12:06:18 by rpelckma         ###   ########.fr       */
+/*   Updated: 2025/04/05 14:11:32 by rpelckma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "./minilibx-linux/mlx.h"
 # include <math.h>
 
-# define SIZE 1000
+# define SIZE 600
 
 # define ESC 65307
 # define UP 65362
