@@ -6,7 +6,7 @@
 /*   By: rpelckma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 12:47:40 by rpelckma          #+#    #+#             */
-/*   Updated: 2025/04/05 12:11:22 by rpelckma         ###   ########.fr       */
+/*   Updated: 2025/04/07 20:41:45 by rpelckma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,22 @@ int	ft_is_valid_nbr(const char *str)
 		str++;
 	}
 	return (has_digit);
+}
+
+int	ft_print_julia_presets(void)
+{
+	ft_putendl_fd("Julia Set suggestions", 1);
+	ft_putendl_fd("  0.285 0.01        → Twisted seahorse shapes", 1);
+	ft_putendl_fd("  0.355 0.355       → Dense dendritic structure", 1);
+	ft_putendl_fd("  0.37 -0.1         → Nebula-like spirals", 1);
+	ft_putendl_fd("  -0.70176 -0.3842  → Classic Julia (connected, filled)", 1);
+	ft_putendl_fd("  -0.4 0.6          → Lightning/cracked glass pattern", 1);
+	ft_putendl_fd("  -0.8 0.156        → Delicate symmetric spirals", 1);
+	ft_putendl_fd("  -0.7269 0.1889    → Detailed, swirling structure", 1);
+	ft_putendl_fd("  0.0 0.8           → Funnel/vortex shape", 1);
+	ft_putendl_fd("  -0.2 0.75         → Pinched, shell-like forms", 1);
+	ft_putendl_fd("  -1.476 0.0        → Thin flower petal structures", 1);
+	return (1);
 }
 
 void	init_fractal(t_fractal *fractal)

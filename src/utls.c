@@ -6,7 +6,7 @@
 /*   By: rpelckma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 11:57:41 by rpelckma          #+#    #+#             */
-/*   Updated: 2025/04/05 11:47:52 by rpelckma         ###   ########.fr       */
+/*   Updated: 2025/04/07 20:22:11 by rpelckma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ void	color_pixel(t_fractal *fractal, int x, int y, int color)
 
 int	ft_check_arguments(int ac, char **av)
 {
+	double	param1;
+	double	param2;
+
 	if (ac != 2 && ac != 4)
 		return (0);
 	else if (ac == 4 && (ft_strncmp(av[1], "ship", 5) == 0 || ft_strncmp(av[1],
@@ -30,9 +33,14 @@ int	ft_check_arguments(int ac, char **av)
 	else if (ac == 4)
 	{
 		if ((ft_is_valid_nbr(av[2]) > 0) && (ft_is_valid_nbr(av[3]) > 0))
-			return (1);
-		else
-			return (0);
+		{
+			param1 = ft_atodbl(av[2]);
+			param2 = ft_atodbl(av[3]);
+			if (param1 >= -2.0 && param1 <= 2.0 && param2 >= -2.0
+				&& param2 <= 2.0)
+				return (1);
+		}
+		return (0);
 	}
 	else
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: rpelckma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 10:48:19 by rpelckma          #+#    #+#             */
-/*   Updated: 2025/04/04 19:58:05 by rpelckma         ###   ########.fr       */
+/*   Updated: 2025/04/07 20:42:15 by rpelckma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,9 +107,9 @@ int	main(int argc, char **argv)
 
 	if (ft_check_arguments(argc, argv) == 0)
 	{
-		ft_putendl_fd("Usage: ./fractol <mandel/julia/ship>", 1);
-		ft_putendl_fd("or Usage: ./fractol julia <r nbr> <i nbr>", 1);
-		return (1);
+		ft_putendl_fd(USAGE_MSG_1, 1);
+		ft_putendl_fd(USAGE_MSG_2, 1);
+		return (ft_print_julia_presets());
 	}
 	fractal = malloc(sizeof(t_fractal));
 	if (!fractal)

@@ -6,7 +6,7 @@
 /*   By: rpelckma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 10:47:39 by rpelckma          #+#    #+#             */
-/*   Updated: 2025/04/05 14:11:32 by rpelckma         ###   ########.fr       */
+/*   Updated: 2025/04/07 20:40:56 by rpelckma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <math.h>
 
 # define SIZE 600
+# define USAGE_MSG_1 "Usage: ./fractol <mandel/julia/ship>"
+# define USAGE_MSG_2 "or: ./fractol julia <r nbr> <i nbr> (range: -2.0 to 2.0)"
 
 # define ESC 65307
 # define UP 65362
@@ -65,6 +67,7 @@ typedef struct s_fractal
 
 void		color_pixel(t_fractal *fractal, int x, int y, int color);
 int			ft_is_valid_nbr(const char *str);
+int			ft_print_julia_presets(void);
 int			exit_fractal(t_fractal *fractal);
 int			ft_check_arguments(int ac, char **av);
 double		gen_random_c(void);
